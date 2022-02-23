@@ -23,7 +23,7 @@ def winners_list():
 		winners = []
 
 		for cells in sheet['E1':'E' + str(sheet.max_row)]:
-			if cells[0].value == 1 and sheet['B' + str(cells[0].row)].value == 'Основная':
+			if cells[0].value == 1 and sheet['B' + str(cells[0].row)].value.strip() == 'Основная':
 				winners.append(sheet['D' + str(cells[0].row)].value)
 
 		for winner in winners:
